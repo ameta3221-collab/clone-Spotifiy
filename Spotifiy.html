@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hemant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+   
+    <style>
+       /* Custom Scrollbar */
+  /* Scrollbar hide for horizontal and vertical */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+</style>
+
+  
+</head>
+<body class="bg-zinc-950 text-white">
+
+  <!-- Navbar (Fixed Top) -->
+  <div class="fixed top-0 left-0 w-full z-50 grid grid-cols-1 sm:grid-cols-3 items-center bg-zinc-950 px-4 py-2 gap-2 shadow">
+    <!-- Left -->
+    <div class="flex justify-center sm:justify-start text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+      <i class="fa-brands fa-spotify"></i>
+    </div>
+    <!-- Center -->
+    <div class="flex justify-center mt-2 sm:mt-0">
+      <div class="w-full sm:w-72 md:w-96">
+        <div class="flex items-center bg-gray-200/10 backdrop-blur-sm rounded-full h-8 sm:h-9 md:h-10 px-2 sm:px-3 md:px-4 border border-gray-700">
+          <i class="fa-solid fa-magnifying-glass text-white/75 mr-2 sm:mr-3"></i>
+          <input type="text" placeholder="Search in Drive" class="flex-1 bg-transparent outline-none text-xs sm:text-sm md:text-base placeholder-white/60 text-white" />
+          <i class="fa-solid fa-sliders ml-2 sm:ml-3 text-white/70"></i>
+        </div>
+      </div>
+    </div>
+    <!-- Right -->
+    <div class="flex justify-center md:justify-end items-center gap-1 sm:gap-2 md:gap-3 mt-2 md:mt-0 flex-wrap">
+      <button class="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-md bg-white text-xs sm:text-sm md:text-base">
+        <span class="text-black">Explore Premium</span>
+      </button>
+      <button class="p-1 sm:p-2 rounded-md hover:bg-white/5">
+        <i class="fa-regular fa-bell text-sm sm:text-base md:text-lg"></i>
+      </button>
+      <button class="p-1 sm:p-2 rounded-md hover:bg-white/5">
+        <i class="fa-solid fa-users text-sm sm:text-base md:text-lg"></i>
+      </button>
+      <button class="p-1 sm:p-2 rounded-md hover:bg-white/5">
+        <i class="fa-solid fa-circle-h text-base sm:text-xl md:text-2xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content (Below Navbar) -->
+  <div class="flex flex-col md:flex-row gap-6 p-4 pt-20 h-[calc(100vh-64px)]">
+    <!-- Sidebar -->
+    <div class="hidden md:flex w-full md:w-20 bg-zinc-900 md:flex-col justify-around md:justify-start items-center py-4 sm:py-5 space-y-4 sm:space-y-6 md:space-y-10">
+      <i class="fa-solid fa-table-list text-base sm:text-lg md:text-xl lg:text-2xl"></i>
+      <i class="fa-solid fa-plus text-base sm:text-lg md:text-xl lg:text-2xl"></i>
+    </div>
+
+    <!-- Content -->
+    <div class="flex-1 bg-zinc-900 rounded-lg p-4 py-20 sm:p-5 overflow-y-auto scrollbar-hide">
+      <!-- Tabs -->
+      <div class="mb-4 sm:mb-6">
+        <ul class="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm md:text-base">
+          <li class="px-3 sm:px-4 md:px-6 py-1 sm:py-2 bg-gray-200 text-black rounded-full cursor-pointer">All</li>
+          <li class="px-3 sm:px-4 md:px-6 py-1 sm:py-2 border rounded-full cursor-pointer">Music</li>
+          <li class="px-3 sm:px-4 md:px-6 py-1 sm:py-2 border rounded-full cursor-pointer">Podcasts</li>
+        </ul>
+      </div>
+
+<!-- Horizontal Scroll Container -->
+<div class="flex space-x-4 overflow-x-auto scrollbar-hide p-4 bg-zinc-900">
+  
+  <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 🔁 Repeat more cards -->
+  
+</div>
+
+<!-- Horizontal Scroll Container -->
+<div class="flex space-x-4 overflow-x-auto scrollbar-hide p-4 bg-zinc-900">
+  
+  <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 🔁 Repeat more cards -->
+  
+</div>
+
+<!-- Horizontal Scroll Container -->
+<div class="flex space-x-4 overflow-x-auto scrollbar-hide p-4 bg-zinc-900">
+  
+  <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 🔁 Repeat more cards -->
+  
+</div>
+
+<!-- Horizontal Scroll Container -->
+<div class="flex space-x-4 overflow-x-auto scrollbar-hide p-4 bg-zinc-900">
+  
+  <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 🔁 Repeat more cards -->
+  
+</div>
+
+<!-- Horizontal Scroll Container -->
+<div class="flex space-x-4 overflow-x-auto scrollbar-hide p-4 bg-zinc-900">
+  
+  <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 🔁 Repeat more cards -->
+  
+</div>
+
+<!-- Horizontal Scroll Container -->
+<div class="flex space-x-4 overflow-x-auto scrollbar-hide p-4 bg-zinc-900">
+  
+  <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 🔁 Repeat more cards -->
+  
+</div>
+
+<!-- Horizontal Scroll Container -->
+<div class="flex space-x-4 overflow-x-auto scrollbar-hide p-4 bg-zinc-900">
+  
+  <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 🔁 Repeat more cards -->
+  
+</div>
+
+<!-- Horizontal Scroll Container -->
+<div class="flex space-x-4 overflow-x-auto scrollbar-hide p-4 bg-zinc-900">
+  
+  <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+   <!-- Example Card 1 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 2 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Example Card 3 -->
+  <div class="relative min-w-[120px] sm:min-w-[160px] md:min-w-[200px] lg:min-w-[220px] bg-black rounded-xl p-2 sm:p-3 md:p-4 shadow hover:shadow-lg transition">
+    <img src="Gaddi 150 Song.png" 
+         alt="Product" 
+         class="w-full h-auto object-contain rounded-xl">
+    <!-- Button on top of Image -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-xs md:text-sm hover:bg-blue-600 focus:ring-2 focus:ring-blue-400">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- 🔁 Repeat more cards -->
+  
+</div>
+
+
+
+      </div>
+     
+    </div>
+  </div>
+
+</body>
+</html>
